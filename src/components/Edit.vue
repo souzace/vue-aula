@@ -31,12 +31,12 @@
           />
         </div>
         <div class="form-group col-md-12">
-          <label for="title">Author</label>
+          <label for="title">Autor</label>
           <input
             type="text"
             id="author"
             v-model="book.author"
-            name="title"
+            name="author"
             class="form-control"
             placeholder="Autor"
           />
@@ -68,6 +68,7 @@ export default {
   methods: {
     editBook() {
       let bookData = {
+        id: this.$route.params.id,
         title: this.book.title,
         description: this.book.description,
         author: this.book.author

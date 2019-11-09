@@ -66,7 +66,7 @@ export default {
     },
     deleteBook(id) {
       axios
-        .delete(`${server.baseURL}/book/delete?bookID=${id}`)
+        .delete(`${server.baseURL}/books/${id}`)
         .then(data => {
           console.log(data);
           window.location.reload();
